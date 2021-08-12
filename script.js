@@ -42,6 +42,9 @@ if(guess== winNum){
         setMessage(`Game over, you lost. The correct number was ${winNum}` , 'red');
 
     }else {
+        guesIn.style.borderColor = 'red'
+        guesIn.value=''
+        setMessage(`${guess} is not correct, ${guessNum} guesses left`)
 
     }
 }

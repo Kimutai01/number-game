@@ -30,16 +30,12 @@ if(isNaN(guess) || guess < min || guess > max){
 }
 
 if(guess== winNum){
-    guesIn.disabled= true
-    guesIn.style.borderColor = 'green'
-    setMessage(`${winNum} is correct! YOU WIN`, 'green')
+   gameOver(true, `${winNum} is correct! YOU WIN`);
 }else{
     guessNum -=1
 
     if(guessNum==0){
-        guesIn.disabled= true
-        guesIn.style.borderColor = 'red'
-        setMessage(`Game over, you lost. The correct number was ${winNum}` , 'red');
+       gameOver(false, `Game over, you lost. The correct number was ${winNum}`)
 
     }else {
         guesIn.style.borderColor = 'red'
@@ -48,6 +44,16 @@ if(guess== winNum){
 
     }
 }
+}
+
+function gameOver(won, msg){
+    let color;
+    won===true ? color='green' : color='red'
+    guesIn.disabled= true
+    guesIn.style.borderColor = color
+    message.style.color = color
+    setMessage(msg)
+
 }
 
 function setMessage(msg , color){

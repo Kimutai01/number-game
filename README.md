@@ -13,7 +13,7 @@ Description
 Setup/Installation Requirements
 Fork or clone the repository
 
-$ git clone https://github.com/Kimutai01/simple-interest-calculator.git
+$ git clone https://github.com/Kimutai01/number-game.git
 open with your favorite editor
 open with liveServer {anyone can make improvements on the app}
 Known Bugs

@@ -25,7 +25,6 @@ guessBtn.addEventListener('click' , theGuess)
 
 function theGuess(){
     let guess = parseInt(guesIn.value)
-    alert(guess)
 
 
 //validating

@@ -1,6 +1,6 @@
 let min = 1;
 let max = 10;
-let winNum = getWinningNum();
+let winNum = getRandomNum(min, max);
 let guessNum = 3;
 
 
@@ -61,6 +61,12 @@ function gameOver(won, msg){
     setMessage(msg)
     guessBtn.value= 'play Again';
     guessBtn.className += 'play-again'
+
+}
+
+function getRandomNum(min, max){
+   return Math.floor(Math.random()*(max-min+1)+min)
+
 
 }
 
